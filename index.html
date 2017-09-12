@@ -1,0 +1,183 @@
+<html>
+    
+<style>
+@import url(stylee.css);    
+</style>
+    
+<header>
+<aside></aside>
+<p></p>
+<p></p>
+</header>
+ 
+<h1>Tracking investments into the Peacebuilding and Statebuilding Goals</h1>
+ 
+<aside></aside>
+ 
+<p>This sankey diagram visualizes in detail how expenditures directed towards the New Deal's <a href="https://www.newdeal4peace.org/peacebuilding-and-statebuilding-goals/">Peacebuilding and Statebuilding Goals</a> (PSG 1-5) can be measured using the OECD's <a href="https://stats.oecd.org/Index.aspx?DataSetCode=CRS1">ODA Data</a>. The chords connect the goals with the respective <a href="http://www.oecd.org/dac/stats/purposecodessectorclassification.htm">purpose codes</a> of the OECD <a href="http://www.oecd.org/dac/stats/dacandcrscodelists.htm">Creditor Reporting System</a>. The matching is based on the States of <a href="http://www.keepeek.com/Digital-Asset-Management/oecd/development/states-of-fragility-2015_9789264227699-en#.WbUwltMjGu4">Fragility Report 2015</a>.</p>
+    
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 900px; height: 300px;"></div>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+        ['PSG 1: Legitimate politics','Government and civil society [151]',7],
+        ['Government and civil society [151]','Anti-corruption organisations and institutions [15113]',1],
+['Government and civil society [151]','Democratic participation and civil society [15150]',1],
+['Government and civil society [151]','Elections [15151]',1],
+['Government and civil society [151]','Legislatures and political parties [15152]',1],
+['Government and civil society [151]','Media and free flow of information [15153]',1],
+['Government and civil society [151]','Human rights [15160]',1],
+['Government and civil society [151]','Women’s equality organisations and institutions [15170]',1],
+['PSG 1: Legitimate politics','Conflict prevention and resolution, peace and security [152]',1],
+['Conflict prevention and resolution, peace and security [152]','Civilian peace-building, conflict prevention and resolution [15220]',1],
+['PSG 2: Security','Conflict prevention and resolution, peace and security [152]',5],
+['Conflict prevention and resolution, peace and security [152]','Security system management and reform [15210]',1],
+['Conflict prevention and resolution, peace and security [152]','Participation in international peacekeeping operations [15230]',1],
+['Conflict prevention and resolution, peace and security [152]','Reintegration and SALW control [15240]',1],
+['Conflict prevention and resolution, peace and security [152]','Removal of land mines and explosive remnants of war [15250]',1],
+['Conflict prevention and resolution, peace and security [152]','Child soldiers (Prevention and demobilisation) [15261]',1],
+['PSG 2: Security','Other social infrastructure and services [160]',1],
+['Other social infrastructure and services [160]','Narcotics control [16063]',1],
+['PSG 2: Security','Agriculture [311]',1],
+['Agriculture [311]','Agricultural alternative development [31165]',1],
+['PSG 2: Security','Other multisector [430]',1],
+['Other multisector [430]','Non-agricultural alternative development [43050]',1],
+['PSG 3: Justice','Government and civil society [151]',1],
+['Government and civil society [151]','Legal and judicial development [15130]',1],
+['PSG 4: Economic Foundations','Education [110]',13],
+['Education [110]','Education, level unspecified [11120, 11130, 11130]',3],
+['Education [110]','Basic education [112, 11220, 11230, 11240]',4],
+['Education [110]','Secondary education [113, 11320, 11330]',3],
+['Education [110]','Post-secondary education [114, 11420, 11430]',3],
+['PSG 4: Economic Foundations','Health [120]',1],
+['Health [120]','Health personnel development [12281]',1],
+['PSG 4: Economic Foundations','Population policies [130]',1],
+['Population policies [130]','Personnel development for population and reproductive health [13081]',1],
+['PSG 4: Economic Foundations','Other social infrastructure and services [160]',2],
+['Other social infrastructure and services [160]','Employment policy and administrative management [16020]',2],
+['Other social infrastructure and services [160]','Multisector aid for basic social services [16050]',2],
+['PSG 4: Economic Foundations','Transport and storage [210]',7],
+['Transport and storage [210]','Transport policy and administrative management [21010]',1],
+['Transport and storage [210]','Road transport [21020]',1],
+['Transport and storage [210]','Rail transport [21030]',1],
+['Transport and storage [210]','Water transport [21040]',1],
+['Transport and storage [210]','Air transport [21050]',1],
+['Transport and storage [210]','Storage [21061]',1],
+['Transport and storage [210]','Education and training in transport and storage [21081]',1],
+['PSG 4: Economic Foundations','Communications [220]',3],
+['Communications [220]','Telecommunications [22020]',1],
+['Communications [220]','Radio/television/print media [22030]',1],
+['Communications [220]','Information and communication technology (ICT) [22040]',1],
+['PSG 4: Economic Foundations','Energy generation, distribution and efficiency [230]',15],
+['Energy generation, distribution and efficiency [230]','Energy generation, renewable sources [232, 23230, -40, -50, -60]',5],
+['Energy generation, distribution and efficiency [230]','Energy generation, non-renewable sources [233, 23320, -30, -40]',4],
+['Energy generation, distribution and efficiency [230]','Other Energy-related sectors [23181, 82, 234, 235, 23630, -40]',6],
+['PSG 4: Economic Foundations','Banking and financial services [240]',2],
+['Banking and financial services [240]','Informal/semi-formal financial intermediaries [24040]',1],
+['Banking and financial services [240]','Education/training in banking and financial services [24081]',1],
+['PSG 4: Economic Foundations','Business and other services [250]',2],
+['Business and other services [250]','Business support services and institutions [25010]',1],
+['Business and other services [250]','Privatisation [25020]',1],
+['PSG 4: Economic Foundations','Agriculture [311]',17],
+['Agriculture [311]','Agricultural policy and administrative management [31110]',1],
+['Agriculture [311]','Agricultural development [31120]',1],
+['Agriculture [311]','Agricultural land resources [31130]',1],
+['Agriculture [311]','Agricultural water resources [31140]',1],
+['Agriculture [311]','Agricultural inputs [31150]',1],
+['Agriculture [311]','Other Agriculture-related sectors [31161-66, -81, -82, -91-95]',13],
+['PSG 4: Economic Foundations','Forestry [312]',5],
+['Forestry [312]','Forestry development [31220]',1],
+['Forestry [312]','Other Forestry-related sectors [31261, -81, -82, -91]',4],
+['PSG 4: Economic Foundations','Fishing [313]',4],
+['Fishing [313]','Fishery development [31320]',1],
+['Fishing [313]','Other Fishery related sectors [31381, -82, -91]',3],
+['PSG 4: Economic Foundations','Industry [321]',16],
+['Industry [321]','Industrial development [32120]',1],
+['Industry [321]','Small and medium-sized enterprises (SME) development [32130]',1],
+['Industry [321]','Cottage industries and handicraft [32140]',1],
+['Industry [321]','Other industres [32161, -62-72, -82]',12],
+['PSG 4: Economic Foundations','Mineral resources and Mining [322]',9],
+['Mineral resources and Mining [322]','Mineral prospection and exploration [32220]',1],
+['Mineral resources and Mining [322]','Other Mineral-related secotrs [32261-68]',8],
+['PSG 4: Economic Foundations','Construction [323]',1],
+['Construction [323]','Construction policy and administrative management [32310]',1],
+['PSG 4: Economic Foundations','Tade policy and regulations [331]',1],
+['Tade policy and regulations [331]','Trade education/training [33181]',1],
+['PSG 4: Economic Foundations','Tourism [332]',1],
+['Tourism [332]','Tourism policy and administrative management [33210]',1],
+['PSG 4: Economic Foundations','Other multisector [430]',2],
+['Other multisector [430]','Multisector education/training [43081]',1],
+['Other multisector [430]','Research/scientific institutions [43082]',1],
+['PSG 5: Revenues & Services','Education [110]',4],
+['Education [110]','Education policy and administrative management [11110]',1],
+['Health [120]','Health policy and administrative management [12110]',1],
+['PSG 5: Revenues & Services','Population policies [130]',1],
+['Population policies [130]','Population policy and administrative management [13010]',1],
+['PSG 5: Revenues & Services','Water and Sanitation [140]',1],
+['Water and Sanitation [140]','Water sector policy and administrative management [14010]',1],
+['PSG 5: Revenues & Services','Government and civil society [151]',3],
+['Government and civil society [151]','Public sector policy and administrative management [15110]',1],
+['Government and civil society [151]','Public Finance Management (PFM) [15111]',1],
+['Government and civil society [151]','Decentralisation and support to subnational government [15112]',1],
+['PSG 5: Revenues & Services','Other social infrastructure and services [160]',2],
+['Other social infrastructure and services [160]','Social/ welfare services [16010]',1],
+['Other social infrastructure and services [160]','Statistical capacity building [16062]',1],
+['PSG 5: Revenues & Services','Communications [220]',1],
+['Communications [220]','Communications policy and administrative management [22010]',1],
+['PSG 5: Revenues & Services','Energy generation, distribution and efficiency [230]',1],
+['Energy generation, distribution and efficiency [230]','Energy policy and administrative management [23110]',1],
+['PSG 5: Revenues & Services','Banking and financial services [240]',3],
+['Banking and financial services [240]','Financial policy and administrative management [24010]',1],
+['Banking and financial services [240]','Monetary institutions [24020]',1],
+['Banking and financial services [240]','Formal sector financial intermediaries [24030]',1],
+['PSG 5: Revenues & Services','Forestry [312]',1],
+['Forestry [312]','Forestry policy and administrative management [31210]',1],
+['PSG 5: Revenues & Services','Fishing [313]',1],
+['Fishing [313]','Fishing policy and administrative management [31310]',1],
+['PSG 5: Revenues & Services','Industry [321]',1],
+['Industry [321]','Industrial policy and administrative management [32110]',1],
+['PSG 5: Revenues & Services','Mineral resources and Mining [322]',1],
+['Mineral resources and Mining [322]','Mineral/mining policy and administrative management [32210]',1],
+['PSG 5: Revenues & Services','Trade policy and regulations [331]',5],
+['Trade policy and regulations [331]','Trade policy and administrative Management [33110]',1],
+['Trade policy and regulations [331]','Trade facilitation [33120]',1],
+['Trade policy and regulations [331]','Regional trade agreements (RTAs) [33130]',1],
+['Trade policy and regulations [331]','Multilateral trade negotiations [33140]',1],
+['Trade policy and regulations [331]','Trade-related adjustment [33150]',1],
+['PSG 5: Revenues & Services','Other multisector [430]',2],
+['Other multisector [430]','Urban development and management [43030]',1],
+['Other multisector [430]','Rural development [43040]',1],
+['PSG 5: Revenues & Services','General budget support [510]',1],
+['General budget support [510]','General budget support-related aid [51010]',1]
+    ]);
+
+    // Set chart options
+    var options = {
+      'width': 1000,
+      'height': 1400,
+    //chartArea: {  width: "10%", height: "50%" }
+      //'title': 'Measuring the Peacebuilding and Statebuilding Goals',
+      //'legend': 'right'
+      
+      //sankey: { node: { nodePadding: 80 } },
+      //sankey: { 
+        //node: { label: { labelPadding: 10 } }},
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</body>
+</html>
